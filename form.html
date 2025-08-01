@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="form1">
+            <h3 class="step-title">Información Personal</h3>
+            <p class="step-subtitle">Cuéntanos un poco sobre ti para personalizar tu experiencia</p>
+            <div class="form-group">
+                <label for="firstName">Nombre completo</label>
+                <input class="form-input" type="text" name="firstName" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="username">@Instagram</label>
+                    <input class="form-input" type="text" name="username" placeholder="@usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input class="form-input" type="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input class="form-input" type="text" name="phone" placeholder="123-456-7890" required>
+                </div>
+                <div class="form-group">
+                    <label for="municipality">Alcaldía / Municipio</label>
+                    <input class="form-input" type="text" name="municipality" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="gender">Género</label>
+                <select class="form-select" name="gender" required>
+                    <option value="">Seleccionar</option>
+                    <option value="male">Masculino</option>
+                    <option value="female">Femenino</option>
+                    <option value="other">Otro</option>
+                </select>
+            </div>
+
+            <div class="btn-box">
+                <button id="btn-next-1" type="button" class="btn-next">Siguiente</button>
+            </div>
+        </form>
+        <form id="form2">
+            <h3 class="step-title">Información del Tatuaje</h3>
+            <p class="step-subtitle">Cuéntanos sobre el tatuaje que deseas realizar</p>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="tattooName">Estilo de Tatuaje</label>
+                    <select class="form-select" name="tattooStyle" id="tattooStyle" required>
+                        <option value="">Seleccionar</option>
+                        <option value="Fine Line">Fine Line</option>
+                        <option value="Black Work">Black Work</option>
+                        <option value="Full color">Full color</option>
+                        <option value="Black Out">Black Out</option>
+                        <option value="Micro realismo">Micro realismo</option>
+                        <option value="Composición">Composición</option>
+                        <option value="Lineal">Lineal</option>
+                        <option value="Geometrico">Geometrico</option>
+                        <option value="Lettering">Lettering</option>
+                        <option value="Black & Grey">Black & Grey</option>
+                        <option value="Realismo">Realismo</option>
+                        <option value="Achurado/grabado">Achurado/grabado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tattooName">Tatuador sugerido</label>
+                    <select name="tattooDesigner" id="tattooDesigner" class="form-select" required>
+                        <option value="">Seleccionar</option>
+                        <option value="TRAZO">TRAZO</option>
+                        <option value="WEN">WEN</option>
+                        <option value="ALESSANDRO">ALESSANDRO</option>
+                        <option value="EDU">EDU</option>
+                        <option value="MAIRIM">MAIRIM</option>
+                        <option value="YULE">YULE</option>
+                        <option value="CESO">CESO</option>
+                        <option value="LINDA">LINDA</option>
+                        <option value="PAM MOONBLACK">PAM MOONBLACK</option>
+                        <option value="MEL">MEL</option>
+                        <option value="ALEX FRANKENSTEIN">ALEX FRANKENSTEIN</option>
+                        <option value="FINKA">FINKA</option>
+                        <option value="SANDY">SANDY</option>
+                        <option value="EDWIN">EDWIN</option>
+                        <option value="NAHUAL">NAHUAL</option>
+                        <option value="LALO">LALO</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="tattooLocation">Ubicación del Tatuaje</label>
+                    <input class="form-input" type="text" name="tattooLocation" placeholder="Ej: Brazo izquierdo"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tattooSize">Tamaño del Tatuaje</label>
+                    <input class="form-input" type="text" name="tattooSize" placeholder="Ej: 15x20 cm" required>
+                </div>
+            </div>
+            <div class="form-group"><label for="tattooDescription">Descripción del Tatuaje</label></div>
+            <textarea class="form-input" name="tattooDescription"
+                placeholder="Por favor, describe tu tatuaje con el mayor detalle posible." rows="4" required></textarea>
+            <div class="btn-box">
+                <button id="btn-prev-2" type="button" class="btn-prev hidden">Anterior</button>
+                <button id="btn-next-2" type="button" class="btn-next">Siguiente</button>
+            </div>
+        </form>
+
+        <form id="form3">
+            <h3 class="step-title">Información de Pago</h3>
+            <p class="step-subtitle">Detalles sobre el pago y el anticipo</p>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="tattooPrice">Precio del Tatuaje</label>
+                    <input class="form-input" type="number" name="tattooPrice" min="0" step="any" placeholder="$"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="anticipationAmount">Anticipo depositado</label>
+                    <input class="form-input" type="number" name="anticipationAmount" min="0" step="any" placeholder="$"
+                        required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="paymentProof">Comprobante de Pago</label>
+                <div class="upload-box" id="drop-area">
+                    <div class="upload-info" id="upload-info">
+                        <div class="upload-icon"><i class="fa-solid fa-file-circle-plus"></i></div>
+                        <p>
+                            Arrastra y suelta el archivo aquí o
+                            <label for="paymentProof" class="file-label">selecciona el archivo</label>
+                            que deseas subir.
+                        </p>
+                    </div>
+                    <input type="file" id="paymentProof" name="comprobante" accept="image/*,application/pdf" hidden
+                        required />
+
+                    <div id="preview" class="preview-box">
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <button id="btn-prev-3" type="button" class="btn-prev hidden">Anterior</button>
+                <button id="btn-next-3" type="button" class="btn-next">Siguiente</button>
+            </div>
+        </form>
+        <form id="form4">
+            <h3 class="step-title">Agendar cita</h3>
+            <p class="step-subtitle">Selecciona la fecha y hora de tu cita</p>
+            <div class="form-group"><label for="appointmentDate">Fecha de la Cita</label>
+                <input class="form-input" type="date" name="appointmentDate" placeholder="Fecha de la Cita" required>
+            </div>
+            <div class="form-group">
+                <label for="appointmentTime">Hora de la Cita</label>
+                <div class="select-time">
+                    <select class="form-select" id="hora-hh" required>
+                        <option value="">HH</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+
+                    <select class="form-select" id="hora-mm" required>
+                        <option value="">MM</option>
+                        <option value="00">00</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                    </select>
+
+                    <select class="form-select" id="hora-ampm" required>
+                        <option value="">AM/PM</option>
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">¿Tu cita la agendó el estudio o el tatuador?</label>
+                <select name="" id="" class="form-select">
+                    <option value="">Seleccionar</option>
+                    <option value="Estudio Mágico Ink">Estudio Mágico Ink</option>
+                    <option value="Directo con el tatuador">Directo con el tatuador</option>
+                </select>
+            </div>
+            <div class="terms-section">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="acceptTerms" required>
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Acepto los términos y condiciones</span>
+                </label>
+            </div>
+            <div class="btn-box">
+                <button id="btn-prev-4" type="button" class="btn-prev hidden">Anterior</button>
+                <button id="btn-next-4" type="button" class="btn-next">Confirmar</button>
+            </div>
+        </form>
+        <div class="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="circle active">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+        </div>
+    </div>
+</body>
+<script type="module" src="js/main.js"></script>
+
+</html>
